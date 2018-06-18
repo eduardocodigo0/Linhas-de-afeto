@@ -2,7 +2,7 @@
 
 ### Design
 
-+ Em construção
++ Completo
 
 ###  Programação
 

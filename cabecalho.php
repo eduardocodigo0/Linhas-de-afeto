@@ -13,8 +13,8 @@
       <a href="index.php"><h2>Linhas de Afeto</h2></a>
       <ul >
         <li><a href="contos.php">Contos eróticos</a></li>
-        <li><a href="cronicas.php">Rotina</a></li>
-        <li><a href="poemas.php">Textos de amor</a></li>
-        <li><a href="Sobre.php">Sobre</a></li>
+        <li><a href="rotina.php">Rotina</a></li>
+        <li><a href="amor.php">Textos de amor</a></li>
+        <li><a href="sobre.php">Sobre</a></li>
       </ul>
     </nav>

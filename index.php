@@ -15,15 +15,15 @@
       </div>
 
       <div  class="flex-container">
-        <p>Ler crônicas é legal</p>
-        <img src="img/cronicas.png" alt="cronicas">
-        <a href="cronicas.php" class="botao">Ler crônicas</a>
+        <p>Ler minha rotina é legal</p>
+        <img src="img/rotina.png" alt="cronicas">
+        <a href="rotina.php" class="botao">Ler rotina</a>
       </div >
 
       <div class="flex-container">
-        <p>Ler poemas é legal</p>
-        <img src="img/poesias.png" alt="poemas">
-        <a href="poemas.php" class="botao">Ler poemas</a>
+        <p>Ler textos de amor é legal</p>
+        <img src="img/amor.png" alt="poemas">
+        <a href="amor.php" class="botao">Ler textos de amor</a>
       </div>
 
     </section>

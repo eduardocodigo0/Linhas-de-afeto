@@ -11,6 +11,27 @@ body{
   align-items: center;
 }
 
+
+.botao-alterar{
+  text-decoration: none;
+  color:#f1f1f1 !important;
+  padding: 10px;
+  font-weight: 700;
+  background-color: blue;
+  margin: 5px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px black;
+}
+.botao-deletar{
+  text-decoration: none;
+  color:#f1f1f1 !important;
+  font-weight: 700;
+  background-color: red;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px black;
+}
 .botao{
   text-decoration: none;
   padding: 30px 10px;
@@ -30,6 +51,10 @@ body{
 .botao:hover{
   background-color: #680001;
 }
+
+
+
+
 /*Navegacao*/
 nav{
   width: 100%;
@@ -80,8 +105,8 @@ nav ul li:hover{
   font-style: italic;
 }
 
-/*cabecalho*/
-
+/*cabecalhos*/
+/*-------HOME--------*/
 #home-header{
 
   background-image: url('../img/cabecalho-home.jpg');
@@ -93,6 +118,7 @@ nav ul li:hover{
 }
 
 #home-header h1{
+  font-family: Philosopher, serif;
   text-shadow: 2px 2px 2px black;
   font-size: 2.5em;
 }
@@ -103,9 +129,94 @@ nav ul li:hover{
   text-shadow: 0.5px 0.5px 0.5px black;
   padding-bottom: 10px;
 }
+/*--------------SOBRE--------------------*/
+#sobre-header{
+  background-image: url('../img/cabecalho-sobre.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 30vh;
+  color: #f1f1f1;
+  justify-content: center;
+}
+#sobre-header h1 {
+  font-family: Philosopher, serif;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 2px black;
 
-/*Textos*/
 
+}
+
+/*----------CONTOS-------------*/
+#contos-header{
+  background-image: url("../img/cabecalho-contos.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 30vh;
+  justify-content: center;
+  color: #f1f1f1;
+
+}
+
+#contos-header h1{
+  font-family: Philosopher, serif;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 2px black;
+
+}
+
+#contos-header p{
+  font-size: 2em;
+  text-shadow: 2px 2px 2px black;
+}
+
+/*----------ROTINA------------*/
+
+#rotina-header{
+  background-image: url("../img/cabecalho-rotina.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 30vh;
+  justify-content: center;
+  color: #f1f1f1;
+
+}
+#rotina-header h1{
+  font-family: Philosopher, serif;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 2px black;
+}
+
+#rotina-header p{
+  font-size: 2em;
+  text-shadow: 2px 2px 2px black;
+}
+/*----------AMOR----------*/
+
+#amor-header{
+  background-image: url("../img/cabecalho-amor.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 30vh;
+  justify-content: center;
+  color: #f1f1f1;
+}
+#amor-header h1{
+  font-family: Philosopher, serif;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 2px black;
+}
+#amor-header p{
+  font-size: 2em;
+  text-shadow: 2px 2px 2px black;
+}
+
+/*Sessoes*/
+
+/*sessoes home*/
 #textos{
   width: 100%;
   display:flex;
@@ -117,6 +228,7 @@ nav ul li:hover{
 }
 
 #textos h2{
+  font-family: Philosopher, serif;
   font-size: 2.5em;
   margin-bottom: 0;
 }
@@ -137,6 +249,147 @@ nav ul li:hover{
 #textos div p{
   font-size: 2em;
 
+}
+/*sessoes sobre*/
+/*1*/
+#informacao{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  background-color: #f6aea2;
+  color: #db4c5c;
+  padding: 10px 0 50px 0;
+}
+
+#informacao h3{
+  font-family: Philosopher, serif;
+  width: 100%;
+  text-align: center;
+  font-size: 2.5em;
+}
+
+#info-img img{
+  border: 3px solid  #db4c5c;
+  width: 90%;
+
+}
+#info-img{
+  width:40%;
+}
+
+#info-dados{
+  font-size: 2em;
+  width: 50%;
+}
+/*2*/
+
+#descricao{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #6b6164;
+  color: #d1cbba;
+}
+
+#descricao h3{
+  font-family: Philosopher, serif;
+  font-size: 2.5em;
+}
+
+#descricao p {
+  font-size: 1.5em;
+  padding:  0 30px 20px;;
+}
+
+/*3*/
+#contato{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #db4c5c;
+}
+
+
+#contato h2{
+  font-family: Philosopher, serif;
+  font-size: 2.5em;
+  color: #f6aea2;
+}
+
+#contato div{
+  background-color: #f6aea2;
+  width: 80%;
+  margin-bottom: 10%;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  color: #db4c5c;
+  font-weight: 700;
+
+}
+
+#contato img{
+  width: 50%;
+}
+
+#contato p {
+  font-size: 2em;
+}
+
+
+#contato a{
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2em;
+}
+/*Sessao conteudo*/
+
+.sessao-conteudo{
+  background-color: #f6aea2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sessao-conteudo div{
+  background-color: #f1f1f1;
+  margin: 20px 0 10px 0;
+  border-radius: 10px;
+  padding: 10px;
+  color: #080005;
+  box-shadow: 2px 2px 2px black;
+
+}
+.sessao-conteudo div a{
+  text-decoration: none;
+  color: #db4c5c;
+
+
+}
+
+.sessao-conteudo div h3{
+  text-align: left;
+  text-decoration: none;
+  font-family: Philosopher, serif;
+  font-size: 2.5em;
+  color: #080005;
+}
+
+.sessao-conteudo div p{
+  font-size: 2em;
+}
+
+.textolink{
+  font-size: 2em;
+  float: right;
+  margin-right: 20px;
+  font-style: italic;
+}
+
+.textolink:hover{
+  text-decoration: underline;
 }
 
 /*RODAPE*/
@@ -183,7 +436,7 @@ footer{
   }
 
   nav ul li:hover{
-    
+
      font-style: italic;
   }
 /*Cabecalho*/
@@ -200,8 +453,38 @@ footer{
 #home-header p{
   font-size: 1.5em;
 }
+/*cabecalho sobre*/
 
-/*TEXTOS*/
+#sobre-header{
+  min-height: 50vh;
+}
+
+#sobre-header h1{
+  font-size: 3.2em;
+}
+/*header-contos*/
+#contos-header{
+  min-height: 50vh;
+}
+#contos-header h1{
+  font-size: 3.2em;
+}
+/*header-rotina*/
+#rotina-header{
+  min-height: 50vh;
+}
+#rotina-header h1{
+  font-size: 3.2em;
+}
+/*header-amor*/
+#amor-header{
+  min-height: 50vh;
+}
+#amor-header h1{
+  font-size: 3.2em;
+}
+
+/*sessao home*/
 #textos{
   flex-direction: row;
   flex-wrap: wrap;
@@ -225,11 +508,38 @@ footer{
 }
 
 
+/*sessoes sobre*/
 
+#contato{
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#contato h2{
+  width: 100%;
+  text-align: center;
+}
+
+#contato div{
+  width:30%;
+  margin-left: 1%;
+  margin-bottom: 5%;
+  padding-bottom: 5px;
+}
+#contato p{
+  font-size: 1.9em;
+  font-weight: 400;
+
+}
+
+#info-img{
+  max-width: 500px;
 }
 
 /*Rodape*/
 
 footer{
 
+}
 }
