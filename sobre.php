@@ -41,7 +41,7 @@
     <p><strong>E-mail</strong></p>
 
     <a href="mailto:liviaemily@hotmail.com"><img src="img/icons/mail.png" alt="email"></a>
-    <p>liviaemily@hotmail.com</p>
+    <p >liviaemily@hotmail.com</p>
 
   </div>
   <div class="flex-container">
@@ -53,7 +53,7 @@
   <div class="flex-container">
     <p> <strong>Instagram</strong> </p>
 
-    <br>
+
     <a href="https://www.instagram.com/linhasdeafeto5/"><img src="img/icons/instagram.png" alt="instagram"></a>
     <p>@linhasdeafeto5</p>
 

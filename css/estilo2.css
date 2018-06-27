@@ -1,0 +1,153 @@
+/*GERAL*/
+body{
+  font-size: 1.55em;
+  background-color: #f6aea2;
+
+}
+
+header{
+  width: 100%;
+  background-color: #580001;
+}
+.alerta{
+  background-color: rgba(255,255,50,0.15);
+  font-size: 0.8em;
+  font-weight: 700;
+  color: yellow;
+  width: 50%;
+  text-align: center;
+
+}
+
+.bt_form{
+  background-color:#580001;
+  text-decoration: none;
+  color: #f1f1f1;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.bt_editar{
+  background-color: blue;
+  text-decoration: none;
+  color: #f1f1f1;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 10px;
+
+}
+.bt_deletar{
+  background-color: red;
+  text-decoration: none;
+  color: #f1f1f1;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 10px;
+
+}
+
+#alteracao_tabela_div{
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  color: #090909;
+}
+#alteracao_tabela{
+  padding: 10px;
+
+}
+#alteracao_tabela td{
+  padding: 10px;
+  padding-top: 20px;
+}
+
+
+
+  section{
+    display: flex;
+    flex-direction: column;
+    background-color: #d1cbba;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+    color: #580001;
+    max-width: 100%;
+    border-radius: 10px;
+
+  }
+  h1{
+     font-size: 3em;
+  }
+
+
+  h3{
+    font-size: 2em;
+  }
+
+form{
+  max-width: 100%;
+}
+
+/*central*/
+
+#central-menu{
+
+  padding: 20px;
+  background-color: #d1cbba;
+}
+
+#central-menu h3{
+
+  color: #580001;
+}
+
+#central-menu div{
+  padding: 20px;
+  width: 90%;
+}
+
+#central-menu div a{
+  width: 100%;
+  padding: 20px;
+  margin: 20px;
+}
+
+.titulo-central{
+  color: #d1cbba !important;
+}
+
+/*alteracao*/
+
+#alteracao_tabela_div{
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 1000px) {
+  #central-menu div{
+    padding: 20px;
+    width: 60%;
+  }
+
+#alteracao_tabela_div{
+    margin-bottom: 20px;
+  }
+#alteracao_tabela{
+    font-size: 0.9em;
+
+  }
+
+
+  #alteracao_tabela td{
+    padding: 15px;
+  }
+
+  .login-section{
+
+    max-width: 60%;
+    margin: auto;
+    margin-top: 5%;
+  }
+}

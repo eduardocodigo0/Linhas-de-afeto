@@ -39,13 +39,13 @@ body{
   background-color: #580001;
   font-weight: 700;
 
-  width: 30%;
+  width: 50%;
 
   justify-content: center;
   min-width: 100px;
   text-align: center;
   border-radius: 50px;
-  font-size: 2em;
+  font-size: 1.8em;
 }
 
 .botao:hover{
@@ -53,6 +53,17 @@ body{
 }
 
 
+h1{
+  font-family: Philosopher, serif;
+}
+
+h2{
+  font-family: Philosopher, serif;
+}
+
+h3{
+  font-family: Philosopher, serif;
+}
 
 
 /*Navegacao*/
@@ -113,7 +124,8 @@ nav ul li:hover{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
+  justify-content: center;
+  min-height: 30vh;
   color: #f1f1f1;
 }
 
@@ -213,6 +225,28 @@ nav ul li:hover{
   font-size: 2em;
   text-shadow: 2px 2px 2px black;
 }
+/*------------LEITOR------------*/
+
+#leitor-header{
+  background-image: url("../img/cabecalho-leitor.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 30vh;
+  justify-content: center;
+  color: #f1f1f1;
+}
+
+#leitor-header h1{
+  font-family: Philosopher, serif;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 2px black;
+}
+
+#leitor-header p{
+  font-size: 2em;
+  text-shadow: 2px 2px 2px black;
+}
 
 /*Sessoes*/
 
@@ -245,9 +279,11 @@ nav ul li:hover{
 #textos div a{
   margin-top: 6px;
   margin-bottom: 5px;
+  width: 80%;
 }
 #textos div p{
   font-size: 2em;
+
 
 }
 /*sessoes sobre*/
@@ -333,8 +369,9 @@ nav ul li:hover{
   width: 50%;
 }
 
-#contato p {
-  font-size: 2em;
+#contato div p {
+  max-width: 100%;
+  font-size: 1.5em;
 }
 
 
@@ -356,10 +393,12 @@ nav ul li:hover{
 .sessao-conteudo div{
   background-color: #f1f1f1;
   margin: 20px 0 10px 0;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 10px;
   color: #080005;
   box-shadow: 2px 2px 2px black;
+  max-width: 90%;
+
 
 }
 .sessao-conteudo div a{
@@ -392,9 +431,61 @@ nav ul li:hover{
   text-decoration: underline;
 }
 
+.ver-mais{
+  margin-top: 20px;
+  text-decoration: none;
+  color: #db4c5c;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/*sessao-leitor*/
+
+#leitor{
+  background-color: #f6aea2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+#leitor div{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 2px black;
+  color: #080005;
+  background-color: #f1f1f1;
+  padding: 30px;
+  width: 80%;
+  margin: 30px;
+  border-radius: 10px;
+}
+#leitor div h2{
+  font-family: Philosopher, serif;
+  font-size: 2.5em;
+  width: 100%;
+  text-align: center;
+
+}
+
+#leitor div p{
+  margin-left: 10px;
+  font-size: 1.2em;
+}
+
+#texto-integra{
+  width: 100%;
+  max-width: 100%;
+  text-indent: 2em;
+  font-size: 2em !important;
+}
+
 /*RODAPE*/
 
 footer{
+  display: flex;
   background-color: #6b6164;
   color: #d1cbba;
 
@@ -442,17 +533,14 @@ footer{
 /*Cabecalho*/
 
 #home-header{
-  height: 50vh;
-  justify-content: center;
+
+  min-height: 50vh;
 }
 
 #home-header h1{
-  font-size: 3em;
+  font-size: 3.2em;
 }
 
-#home-header p{
-  font-size: 1.5em;
-}
 /*cabecalho sobre*/
 
 #sobre-header{
@@ -483,11 +571,20 @@ footer{
 #amor-header h1{
   font-size: 3.2em;
 }
+/*header-leitor*/
 
+  #leitor-header{
+    min-height: 50vh;
+  }
+  #leitor-header h1{
+    font-size: 3.2em;
+  }
+}
 /*sessao home*/
 #textos{
   flex-direction: row;
   flex-wrap: wrap;
+  padding: 70px 0;
   padding-bottom: 20px.
 }
 #textos h2{
@@ -506,6 +603,7 @@ footer{
 #textos div img{
   width: 100%;
 }
+
 
 
 /*sessoes sobre*/
@@ -532,14 +630,21 @@ footer{
   font-weight: 400;
 
 }
+/*sessao-conteudo*/
 
 #info-img{
   max-width: 500px;
 }
 
+/*sessao leitor*/
+
+#leitor div{
+  width: 60%;
+}
+
 /*Rodape*/
 
-footer{
-
+footer section{
+  margin: 20px;
 }
 }

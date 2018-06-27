@@ -1,11 +1,11 @@
 # Site Linhas de Afeto
 
-### Design
+### Novidades
 
-+ Completo
++ Postagem de textos 
++ Listagem dos textos de casa sessão
 
-###  Programação
+### Correções
 
-+ Em construção
-
++ Melhora no design da area administrativa
 

@@ -21,7 +21,7 @@
       </div >
 
       <div class="flex-container">
-        <p>Ler textos de amor é legal</p>
+        <p>Ler sobre amor é legal</p>
         <img src="img/amor.png" alt="poemas">
         <a href="amor.php" class="botao">Ler textos de amor</a>
       </div>
