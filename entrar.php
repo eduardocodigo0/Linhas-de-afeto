@@ -1,3 +1,25 @@
+<?php
+include('sessao.php');
+
+if(isset($_SESSION["usuario"])){
+  header("location: adm-central.php");
+  die();
+}
+
+if(isset($_SESSION['alertaLog'])){
+  $alerta = "Login ou senha incorretos!";
+  unset($_SESSION['alertaLog']);
+}else{
+  $alerta="";
+}
+
+
+if(!isset($_SESSION["tentativas"])){
+  $_SESSION['tentativas'] = 0;
+}
+if($_SESSION['tentativas'] < 4){
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
   <head>
@@ -15,7 +37,7 @@
 
     <section class="login-section">
       <h3>Administração</h3>
-      <p class="alerta" > </p>
+      <p class="alerta" ><?=$alerta?> </p>
       <form name="loginForm" method="post" action="adm_login.php">
 
         <table>
@@ -28,7 +50,7 @@
             <td> <input  type="password" name="senha" value="" placeholder="Digite sua senha"> </td>
           </tr>
           <tr>
-            
+
             <td> <input class="bt_form" type="submit" name="" value="Entrar" > </td>
 
           </tr>
@@ -43,3 +65,16 @@
 
   </body>
 </html>
+
+
+<?php
+
+}else{
+  echo "Limite de tentativas de login!</br>";
+  echo "<strong>Seu ip: <strong>".$_SERVER['REMOTE_ADDR']."</br>";
+  //echo $_SESSION['tentativas'];
+  //finalizaSessao();
+
+}
+
+?>

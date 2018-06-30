@@ -1,7 +1,55 @@
 <?php
-if(! empty($_GET['sucesso'])){
-$sucesso = $_GET['sucesso'];
-}
+  include('conexao-db.php');
+  include('sessao.php');
+  include('tabela_textos.php');
+
+  if(!isset($_SESSION["usuario"])){
+    header("location: entrar.php");
+    die();
+  }
+
+  if(!isset($_SESSION['alertaCri'])){
+    $alerta = "";
+  }else if($_SESSION['alertaCri'] == 0){
+          $alerta = "Erro no durante procedimento!";
+          unset($_SESSION['alertaCri']);
+  }else{
+    $alerta = "Sucesso!";
+    unset($_SESSION['alertaCri']);
+  }
+
+  $selAmor = "";
+  $selConto = "";
+  $selRotina = "";
+
+  if(isset($_GET['texto'])){
+    $id = $_GET['texto'];
+    if(filter_var($id , FILTER_VALIDATE_INT)){
+      $texto = retornaTextoPorID($con, $id);
+      switch ($texto['tipo']) {
+        case 'Contos Eróticos':
+          $selConto = "selected";
+          break;
+        case 'Rotina':
+            $selRotina = "selected";
+            break;
+        case 'Textos Com Amor':
+            $selAmor = "selected";
+            break;
+        default:
+
+          break;
+      }
+
+    }else{
+      $id = "";
+    }
+  }else{
+    $id = "";
+    $texto['titulo'] = "";
+    $texto['texto'] = "";
+  }
+
 
  ?>
 
@@ -25,31 +73,28 @@ $sucesso = $_GET['sucesso'];
 
         <section>
 
-          <?php
-          if(!empty($sucesso)){
-            if($sucesso == "2"){
-              echo "<p style='color: green'> <strong>Postagem realizada com sucesso!</strong> </p>";
-            }else if($sucesso == "1"){
-              echo "<p style='color: red'> <strong>Erro durante a postegem :(</strong> </p>";
-            }
-          }
-          ?>
-
+          <p class="alerta"><?=$alerta ?></p>
           <h3>Novo Texto</h3>
-          <form method="post" action="nova_postagem.php">
+            <form method="post" action="nova_postagem.php">
+            <?php
+              if(filter_var($id , FILTER_VALIDATE_INT)){
+              ?>
+
+                <input type="hidden" name="id" value="<?=$id  ?>">
+            <?php } ?>
 
             <table>
               <tr>
                 <td> <strong>Titulo:</strong> </td>
-                <td> <input type="text" name="titulo" value="" placeholder="Titulo do texto"> </td>
+                <td> <input type="text" name="titulo" value="<?=$texto['titulo']  ?>" placeholder="Titulo do texto"> </td>
               </tr>
               <tr>
                 <td> <strong>Tipo:</strong> </td>
                 <td>
-                  <select name="tipo">
-                    <option value="Contos Eróticos">Contos Eróticos</option>
-                    <option value="Rotina">Rotina</option>
-                    <option value="Textos Com Amor">Textos Com Amor</option>
+                  <select name="tipo" >
+                    <option value="Contos Eróticos" <?=$selConto ?> >Contos Eróticos</option>
+                    <option value="Rotina" <?=$selRotina  ?> >Rotina</option>
+                    <option value="Textos Com Amor" <?=$selAmor  ?>  >Textos Com Amor</option>
 
                   </select>
                  </td>
@@ -57,13 +102,20 @@ $sucesso = $_GET['sucesso'];
 
               <tr>
                 <td> <strong>Texto:</strong></td>
-                <td> <textarea name="texto" rows="8" cols="50" ></textarea> </td>
+                <td> <textarea name="texto" rows="8" cols="50" >
+                  <?=$texto['texto']  ?>
+                </textarea> </td>
               </tr>
 
               <tr>
+                <?php
+                  if(filter_var($id , FILTER_VALIDATE_INT)){
+                  ?>
+                <td> <input class="bt_form" type="submit" name="" value="Atualizar"> </td>
+                <?php } else{?>
 
                 <td> <input class="bt_form" type="submit" name="" value="Postar"> </td>
-
+                <?php }?>
               </tr>
             </table>
           </form>

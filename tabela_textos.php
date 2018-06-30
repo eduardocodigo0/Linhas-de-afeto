@@ -31,3 +31,20 @@
       $res = mysqli_query($con, $query);
       return  mysqli_fetch_assoc($res);
   }
+
+  function deletaPorID($con, $id){
+    $query = "DELETE FROM textos WHERE id = {$id}";
+    $res = mysqli_query($con, $query);
+    return($res);
+  }
+
+  function atualizaPostagem($con, $id, $titulo, $tipo, $texto){
+    $query =    "UPDATE textos
+                    SET titulo = '{$titulo}', tipo = '{$tipo}', texto = '{$texto}'
+                    WHERE id = {$id};
+                ";
+    $res = mysqli_query($con, $query);
+    return($res);
+
+
+  }

@@ -1,3 +1,13 @@
+<?php
+  include('sessao.php');
+  if(!isset($_SESSION["usuario"])){
+    header("location: entrar.php");
+    die();
+  }
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -17,7 +27,7 @@
       <div class="flex-container">
         <a href="form_nova_postagem.php" class="botao">Adicionar novo texto</a> <br>
         <a href="alteracao_postagem.php" class="botao">Alterar ou remover texto</a> <br>
-        <a href="index.php" class="botao" >Sair</a>
+        <a href="sair.php" class="botao" >Sair</a>
       </div>
     </section>
 

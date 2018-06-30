@@ -1,6 +1,34 @@
 <?php
       include("conexao-db.php");
       include("tabela_textos.php");
+      include('sessao.php');
+      if(!isset($_SESSION["usuario"])){
+        header("location: entrar.php");
+        die();
+      }
+
+      if(isset($_SESSION['alertaDel'])){
+        if($_SESSION['alertaDel'] == 0){
+          $alerta = "Erro durante a exclusão do texto!";
+        }else{
+            $alerta = "Texto excluido com sucesso!";
+        }
+        unset($_SESSION['alertaDel']);
+      }else{
+        $alerta = "";
+      }
+
+      if(isset($_SESSION['alertaAtualiza'])){
+        if($_SESSION['alertaAtualiza'] == 0){
+          $alerta = "Erro durante a atualização do texto!";
+        }else{
+            $alerta = "Texto atualizado com sucesso!";
+        }
+        unset($_SESSION['alertaAtualiza']);
+      }else{
+        $alerta = "";
+      }
+
 
       $textos = retornaTudo($con);
 
@@ -27,6 +55,7 @@
 
 
           <h3>Alteração</h3>
+          <p class="alerta"><?=$alerta ?></p>
           <div id="alteracao_tabela_div">
             <table id="alteracao_tabela">
               <tr>
@@ -47,8 +76,8 @@
                     <td> <?=$texto['titulo'] ?></td>
                     <td> <?=$trecho ?></td>
                     <td> <?=$texto['data'] ?></td>
-                    <td> <a href="atualizar_postagem.php" class="bt_editar">Editar</a> </td>
-                    <td> <a href="excluir_postagem.php" class="bt_deletar">Deletar</a> </td>
+                    <td> <a href="form_nova_postagem.php?texto=<?=$texto['id']?>" class="bt_editar">Editar</a> </td>
+                    <td> <a href="excluir_postagem.php?texto=<?=$texto['id'] ?>" class="bt_deletar">Deletar</a> </td>
 
                   </tr>
 
